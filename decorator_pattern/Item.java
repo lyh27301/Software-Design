@@ -5,7 +5,7 @@ package ca.mcgill.cs.swdesign.common;
  * Jar of peanut butter, package of pasta,
  * whatever.
  */
-public class Item
+public class Item implements sellable
 {
 	private final String aName;
 	private final int aId;
@@ -43,6 +43,8 @@ public class Item
 	/**
 	 * @return The price of the item in cents
 	 */
+	 
+	 @Override
 	public int getPrice()
 	{
 		return aPrice;
