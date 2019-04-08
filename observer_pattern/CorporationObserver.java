@@ -6,8 +6,8 @@ import java.util.Map;
 
 public class CorporationObserver implements Observer
 {
-	private Corporation aObservedCorporation;
-	private Map<String, Inventory> aInventories = new HashMap<String, Inventory>();
+	private Corporation aObservedCorporation;// a reference of concrete subject
+	private Map<String, Inventory> aInventories = new HashMap<String, Inventory>();// states planned to observe; keep updating
 	
 	public CorporationObserver(Corporation pObservedCorporation) {
 		aObservedCorporation = pObservedCorporation;
@@ -51,7 +51,6 @@ public class CorporationObserver implements Observer
 	public String toString() 
 	{
 		if(!aObservedCorporation.compareList(aInventories)) {
-			System.out.println("!");
 			update();
 		}
 		String s = "";
