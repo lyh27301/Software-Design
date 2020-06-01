@@ -63,7 +63,7 @@ public class Corporation implements Iterable<Inventory>, Subject
 		System.out.println(s); 
 		return s;
 	}
-	public boolean compareList(Map<String, Inventory> aInventories2) 
+	public boolean compareList(Map < String, Inventory > aInventories2) 
 	{
 		if (aInventories.size() == (aInventories2).size())
 		{
